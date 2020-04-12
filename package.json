@@ -19,8 +19,11 @@
   },
   "homepage": "https://github.com/EsraaMamoun/book_app#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "ejs": "^3.0.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg": "^8.0.2",
+    "superagent": "^5.2.2"
   }
 }
