@@ -11,10 +11,10 @@ app.set('view engine', 'ejs');
 // app.use(express.static('./public'));
 app.use(express.urlencoded({ extended: true }));
 
-// const url = 'https://www.googleapis.com/books/v1/volumes?q=quilting';
-// superagent.get(url).then((apiResponse) => {
-//     console.log(apiResponse.body.items[0]);
-// });
+const url = 'https://www.googleapis.com/books/v1/volumes?q=quilting';
+superagent.get(url).then((apiResponse) => {
+    console.log(apiResponse.body.items[0]);
+});
 
 app.get('/', (req, res) => {
     res.render('pages/index');
@@ -42,14 +42,16 @@ app.post('/searches/show', (req, res) => {
     console.log('The data what we getting from post:', req.body);
 });
 
-////////////////////////////////////////////////////////////////////
-
 function Book(theBook) {
     this.imageLinks = theBook.volumeInfo.imageLinks.thumbnail;
     this.title = theBook.volumeInfo.title;
     this.authors = theBook.volumeInfo.authors;
     this.description = theBook.volumeInfo.description;
 }
+
+
+
+// ----------------------------------------------------------------------------------------------------------------
 
 function errorHandler(err, req, res) {
     res.status(500).render('pages/error', { anError: err });
