@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book App - Show</title>
+    <link href="../public/styles/style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+    <header>
+        <p>Search Results</p>
+    </header>
+    <main>
+        <% theBook.forEach(resu => { %>
+        <section>
+            <img src=<%= resu.img_url %>>
+            <p><%= resu.title %></p>
+            <p><%= resu.authors%></p>
+            <p><%= resu.description%></p>
+        </section>
+        <% }) %>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
