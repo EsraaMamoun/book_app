@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital@1&family=Comfortaa&family=Indie+Flower&display=swap');
+@media(max-width: 768px){
+    main{
+        margin: 0 auto;
+    }
+    #section{
+        width: 50%;
+        background-color: rgb(199, 196, 196);
+        margin: 5% 0px 5% 0px;
+        text-align: center;
+    }
+    #description{
+        text-align: justify;
+        padding: 5% 5% 5% 5%;
+        font-family: 'Amiri', serif;
+    }
+    #title{
+        padding-top: 5%;
+        font-family: 'Dancing Script', cursive;
+    }
+    #authors{
+        padding-top: 5%;
+        font-family: 'Dancing Script', cursive;
+    }
+    img{
+        padding-top: 5%;
+    }
+    article{
+        margin-left: 30%;
+    }
+}
+
+@media(min-width: 769px){
+    #section{
+        width: 25%;
+        background-color: rgb(199, 196, 196);
+        margin: 4%;
+        text-align: center;
+    }
+    #description{
+        text-align: justify;
+        padding: 5% 5% 5% 5%;
+        font-family: 'Amiri', serif;
+    }
+    #title{
+        padding-top: 5%;
+        font-family: 'Dancing Script', cursive;
+    }
+    #authors{
+        padding-top: 5%;
+        font-family: 'Dancing Script', cursive;
+    }
+    img{
+        padding-top: 5%;
+    }
+    article{
+        display:flex;
+        flex-wrap:wrap;
+    }
+}

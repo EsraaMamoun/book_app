@@ -5,26 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book App - Search</title>
-    <link href="../public/styles/style.css" rel="stylesheet" type="text/css"/>
+    <link href="../public/styles/style.css" rel="stylesheet" type="text/css" />
 </head>
+<header>
+    <p>Best Books!</p>
+</header>
 
 <body>
     <main>
-        <p>Best Books!</p>
-        <form action="/searches/show" method="POST">
+        <h2 id="legend">
             <p>Search by Title or Author</p>
-            <input type="text" placeholder="Enter a title or author" name="searchBy"><br>
-            <label>
-                <span>Title</span>
-                <input type="radio" name="resultSearch" value="title">
-            </label><br>
-            <label>
-                <span>Author</span>
-                <input type="radio" name="resultSearch" value="author"></label><br>
+        </h2>
+        <form action="/searches/show" method="POST">
+
+            <input id="enter" type="text" placeholder="Enter a title or author" name="searchBy"><br>
+            <nav><label>
+                    <span>Title</span>
+                    <input type="radio" name="resultSearch" value="title">
+                </label>
+            </nav>
+            <br>
+            <nav> <label>
+                    <span>Author</span>
+                    <input type="radio" name="resultSearch" value="author">
+                </label>
+            </nav>
+            <br>
             <button>Search the Google Books API</button>
         </form>
     </main>
-    <footer></footer>
+    <footer>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </footer>
 </body>
 
 </html>
