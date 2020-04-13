@@ -34,7 +34,7 @@
 @media(min-width: 769px){
     #section{
         width: 25%;
-        background-color: rgb(199, 196, 196);
+        background-color: rgba(12, 111, 124, 0.26);
         margin: 4%;
         text-align: center;
     }
@@ -57,5 +57,9 @@
     article{
         display:flex;
         flex-wrap:wrap;
+    }
+    #legend{
+        color: ivory;
+        font-size: 25px;
     }
 }

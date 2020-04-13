@@ -28,17 +28,17 @@
     #enter{
 		width: 60%;
 		padding: 10px;
-		color: black;
+		background-color: rgb(25, 7, 36);
 		border-radius: 5px;
 		margin: 20px;
 	}
 	nav{
 		width: 60%;
 		padding: 10px;
-		color: black;
+		color: white;
 		border-radius: 5px;
 		margin: 20px;
-        background-color: rgb(199, 196, 196);
+        background-color: rgb(78, 67, 85);
 	}
 	button{
 		width: 64%;
@@ -46,6 +46,6 @@
 		color: white;
 		border-radius: 5px;
 		margin: 20px;
-		background-color: black;
+		background-color: rgb(25, 7, 36);
 	}
 }

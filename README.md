@@ -55,43 +55,43 @@ Start time: 11:15 pm.
 
 Finish time: 4:15 pm. 
 
-Actual time needed to complete: 5 hours ... //UnComplete...
+Actual time needed to complete: 5 hours. --> 7 hours.
 
 ---
 
 **Number and name of feature: Feature #4**
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 Minutes.
 
-Start time: _____
+Start time: 3:00 pm.
 
-Finish time: _____
+Finish time: 3:20 pm.
 
-Actual time needed to complete: _____
+Actual time needed to complete: 20 minutes.
 
 ---
 
 **Number and name of feature: Feature #5**
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1 Hour.
 
-Start time: _____
+Start time: 8:30 pm.
 
-Finish time: _____
+Finish time: 11:00 pm.
 
-Actual time needed to complete: _____
+Actual time needed to complete: 2 hours and half.
 
 ---
 
 **Number and name of feature: Feature #6**
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 15 Minutes.
 
-Start time: _____
+Start time: 3:30 minutes.
 
-Finish time: _____
+Finish time: 3:40 minutes.
 
-Actual time needed to complete: _____
+Actual time needed to complete: 10 minutes.
 
 ---
 
