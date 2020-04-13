@@ -5,25 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book App - Show</title>
-    <link href="../public/styles/style.css" rel="stylesheet" type="text/css"/>
+    <link href="../public/styles/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <header>
-        <p>Search Results</p>
+        <p>Best Books!</p>
     </header>
-    <main>
-        <% theBook.forEach(resu => { %>
-        <section>
-            <img src=<%= resu.img_url %>>
-            <p><%= resu.title %></p>
-            <p><%= resu.authors%></p>
-            <p><%= resu.description%></p>
-        </section>
-        <% }) %>
+    <main id="main">
+        <h2 id="legend">Search Results</h2>
+        <article>
+            <% theBook.forEach(resu => { %>
+            <section id="section">
+                <img src=<%=resu.imageLinks%>>
+                <p id="title"><%= resu.title %></p>
+                <p id="authors"><%= resu.authors%></p>
+                <p id="description"><%= resu.description%></p>
+            </section>
+            <% }) %>
+        </article>
     </main>
     <footer>
-
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </footer>
 </body>
 
