@@ -9,7 +9,7 @@ const app = express();
 
 app.set('view engine', 'ejs');
 // app.use(express.static('./public'));
-// app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 // const url = 'https://www.googleapis.com/books/v1/volumes?q=quilting';
 // superagent.get(url).then((apiResponse) => {
@@ -26,22 +26,18 @@ app.get('/hello', (req, res) => {
 });
 
 app.get('/searches/new', (req, res) => {
-    console.log('The data what we getting from get:', req.query);
     res.render('pages/searches/new.ejs');
-    //   res.redirect('/searches/new');
-    // console.log('Constructor:', Book.all);
 });
 
 app.post('/searches/show', (req, res) => {
-    superagent.get('https://www.googleapis.com/books/v1/volumes?q=quilting')
+    superagent.get(`https://www.googleapis.com/books/v1/volumes?q=${req.body.searchBy}+in${req.body.resultSearch}`)
         .then(data => {
             let theBook = data.body.items.map((book) => {
-                return new Book(book)
+                return new Book(book);
             })
             res.render('pages/searches/show.ejs', { theBook: theBook });
-            //   res.redirect('/searches/show');
         }).catch(err => {
-            res.status(500).send(err);
+            errorHandler(err, req, res);
         });
     console.log('The data what we getting from post:', req.body);
 });
@@ -49,13 +45,15 @@ app.post('/searches/show', (req, res) => {
 ////////////////////////////////////////////////////////////////////
 
 function Book(theBook) {
-    this.imageLinks = theBook.volumeInfo.imageLinks.smallThumbnail;
+    this.imageLinks = theBook.volumeInfo.imageLinks.thumbnail;
     this.title = theBook.volumeInfo.title;
     this.authors = theBook.volumeInfo.authors;
     this.description = theBook.volumeInfo.description;
-    // Book.all.push(this);
 }
-// Book.all = [];
+
+function errorHandler(err, req, res) {
+    res.status(500).render('pages/error', { anError: err });
+  }
 
 app.use('*', (request, response) => {
     response.status(404).send('NOT FOUND!');
