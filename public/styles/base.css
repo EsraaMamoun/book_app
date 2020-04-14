@@ -95,7 +95,10 @@ table {
 		margin-left: 3%;
 		font-size: 40px;
 	}
-	
+	header p a{
+		text-decoration: none;
+		color: ivory;
+	}
 	footer{
 		position: sticky;
 	    bottom: 0;

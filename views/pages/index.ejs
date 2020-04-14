@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <p>Best Books!</p>
+        <p><a href="/">Best Books!</a></p>
     </header>
     <main>
         <%var num;%>
@@ -22,7 +22,7 @@
                 <img src=<%=book.image_url%>>
                 <p id="title"><%= book.title %></p>
                 <p id="authors"><%= book.author%></p>
-                <a href="/books/<%book.id%>">View Details</a>
+                <a href="/books/<%=book.id%>">View Details</a>
             </section>
             <%num++;%>
             <% }) %>

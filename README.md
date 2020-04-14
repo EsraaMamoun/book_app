@@ -33,7 +33,7 @@ Start time: 2:45 pm.
 
 Finish time: 5:15 pm.
 
-Actual time needed to complete: 2 houes.
+Actual time needed to complete: 2 hours.
 
 ---
 
@@ -99,7 +99,40 @@ Actual time needed to complete: 10 minutes.
 ## LAB-12
 ---
 
+**Number and name of feature: Feature #1**
 
+Estimate of time needed to complete: 2 Hours.
+
+Start time: 2:00am / 12:00 pm.
+
+Finish time: 4:00am / 2:30 pm.
+
+Actual time needed to complete: 4 hours and half.
 
 ---
+
+**Number and name of feature: Feature #2**
+
+Estimate of time needed to complete: 2 Hours.
+
+Start time: 2:30 pm.
+
+Finish time: 4:15 pm.
+
+Actual time needed to complete: 1 hour and 45 minutes.
+
+---
+
+**Number and name of feature: Feature #3**
+
+Estimate of time needed to complete: 1 Hour and half.
+
+Start time: 4:30 pm.
+
+Finish time: 
+
+Actual time needed to complete:
+
+---
+
 [BOOK APP ON HEROKU](https://book-app-esraa.herokuapp.com/)

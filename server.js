@@ -49,7 +49,9 @@ function getOneBook(req, res) {
     const value = [req.params.book_id];
     client.query(SQL, value).then((result) => {
         res.render('pages/books/details', { book: result.rows[0] });
-    });
+    }).catch((err) => {
+        errorHandler(err, req, res);
+      });
 }
 
 function databaseResults(req, res) {
