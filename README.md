@@ -127,11 +127,11 @@ Actual time needed to complete: 1 hour and 45 minutes.
 
 Estimate of time needed to complete: 1 Hour and half.
 
-Start time: 4:30 pm.
+Start time: 11:00 pm.
 
-Finish time: 
+Finish time: 12:15 am.
 
-Actual time needed to complete:
+Actual time needed to complete: 1 Hour and 15 minutes.
 
 ---
 

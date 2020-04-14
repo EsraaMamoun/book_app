@@ -22,6 +22,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/', databaseResults);
 app.get('/books/:book_id', getOneBook);
+app.get('/add', getForm);
+app.post('/add', addBook);
 app.use('/public', express.static('public'));
 app.get('/hello', (req, res) => {
     res.render('pages/index');
@@ -52,6 +54,19 @@ function getOneBook(req, res) {
     }).catch((err) => {
         errorHandler(err, req, res);
       });
+}
+
+function getForm(req, res) {
+    res.render('pages/books/add-book');
+}
+
+function addBook(req, res) {
+    const { author,title,isbn,image_url,description,bookshelf } = req.body;
+    const SQL = 'INSERT INTO books (author,title,isbn,image_url,description,bookshelf) VALUES ($1,$2,$3,$4,$5,$6);';
+    const value = [author,title,isbn,image_url,description,bookshelf];
+    client.query(SQL, value).then((results) => {
+        res.redirect('/');
+    }).catch((err) => errorHandler(err, req, res));
 }
 
 function databaseResults(req, res) {
