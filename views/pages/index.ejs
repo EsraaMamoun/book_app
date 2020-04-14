@@ -8,7 +8,32 @@
 </head>
 <body>
     <header>
-        <h1>Hello World</h1>
+        <p>Best Books!</p>
     </header>
+    <main>
+        <%var num;%>
+        <h2 id="legend">
+            <p>Search the Google Books API</p>
+        </h2>
+        <article>
+            <%num = 0;%>
+            <%books.forEach(book => {%>
+            <section id="section">
+                <img src=<%=book.image_url%>>
+                <p id="title"><%= book.title %></p>
+                <p id="authors"><%= book.author%></p>
+                <a href="/books/<%book.id%>">View Details</a>
+            </section>
+            <%num++;%>
+            <% }) %>
+        </article>
+        <h2 id="legend"><p>Save Books <%= num;%></p></h2>
+    </main>
+    <footer>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </footer>
 </body>
 </html>
