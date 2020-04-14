@@ -2,15 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../../layout/head')%>
     <title>Book App - Show</title>
     <link href="../public/styles/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <header>
-        <p><a href="/">Best Books!</a></p>
+        <%- include('../../layout/header')%>
     </header>
     <main id="main">
         <h2 id="legend"><p>Search Results </p></h2>
@@ -26,10 +25,7 @@
         </article>
     </main>
     <footer>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+        <%- include('../../layout/footer')%>
     </footer>
 </body>
 

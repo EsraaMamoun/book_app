@@ -40,7 +40,7 @@ app.post('/searches/show', (req, res) => {
                 return new Book(book);
             })
             res.render('pages/searches/show.ejs', { theBook: theBook });
-        }).catch(err => {
+        }).catch((err) => {
             errorHandler(err, req, res);
         });
     console.log('The data what we getting from post:', req.body);
@@ -88,7 +88,7 @@ function Book(theBook) {
 // ----------------------------------------------------------------------------------------------------------------
 
 function errorHandler(err, req, res) {
-    res.status(500).render('pages/error', { anError: err });
+    res.status(500).render('pages/error', { error: err });
 }
 
 app.use('*', (request, response) => {

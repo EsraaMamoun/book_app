@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../../layout/head')%>
     <title>Book App - Details</title>
-    <link href="../public/styles/style.css" rel="stylesheet" type="text/css"/>
+    <link href="../public/styles/style.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
     <header>
-        <p><a href="/">Best Books!</a></p>
+        <%- include('../../layout/header')%>
     </header>
     <main>
         <article>
             <section id="section">
+
                 <img src=<%=book.image_url%>>
                 <p id="title"><%= book.title %></p>
                 <p id="authors"><%= book.author%></p>
                 <p id="description"><%= book.description %></p>
                 <p class="isbn">ISBN: <%= book.isbn%></p>
                 <p class="isbn">Bookshelf: <%= book.bookshelf%></p>
+
             </section>
         </article>
     </main>
     <footer>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+        <%- include('../../layout/footer')%>
     </footer>
 </body>
+
 </html>

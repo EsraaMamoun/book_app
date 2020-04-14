@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../layout/head')%>
     <title>Book App</title>
     <link href="./public/styles/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <header>
-        <p><a href="/">Best Books!</a></p>
+        <%- include('../layout/header')%>
     </header>
     <main>
-        <%var num;%>
         <h2 id="legend">
             <p>Search the Google Books API</p>
         </h2>
         <article>
-            <%num = 0;%>
+            <%var num = 0;%>
             <%books.forEach(book => {%>
             <section id="section">
                 <img src=<%=book.image_url%>>
@@ -30,10 +28,7 @@
         <h2 id="legend"><p>Save Books <%= num;%></p></h2>
     </main>
     <footer>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+        <%- include('../layout/footer')%>
     </footer>
 </body>
 </html>
