@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book App - Add Book</title>
+    <link href="../public/styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+<header>
+    <p><a href="/">Best Books!</a></p>
+</header>
+
+<body>
+    <main>
+        <h2 id="legend">
+            <p>Add a new book</p>
+        </h2>
+        <form action="/add" method="POST">
+
+            <input type="text" name="title" placeholder="Book Title" />
+            <input type="text" name="author" placeholder="Author" />
+            <textarea name="image_url" placeholder="Image_URL of the Book Poster"></textarea>
+            <textarea name="description" placeholder="Description of the Book"></textarea>
+            <input type="text" name="bookshelf" placeholder="Bookshelf 'Like: Fantasy/ Science/ Drama etc...'" />
+            <input type="text" name="isbn" placeholder="ISBN" />
+            <br>
+            <button>Add this Book</button>
+        </form>
+    </main>
+    <footer>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </footer>
+</body>
+
+</html>
