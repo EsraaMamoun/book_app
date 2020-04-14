@@ -20,7 +20,7 @@
                 <img src=<%=book.image_url%>>
                 <p id="title"><%= book.title %></p>
                 <p id="authors"><%= book.author%></p>
-                <a href="/books/<%=book.id%>">View Details</a>
+                <button><a href="/books/<%=book.id%>">View Details</a></button>
             </section>
             <%num++;%>
             <% }) %>

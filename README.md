@@ -147,4 +147,16 @@ Actual time needed to complete: 40 minutes.
 
 ---
 
+**Number and name of feature: Feature #5**
+
+Estimate of time needed to complete: 1 Hour.
+
+Start time: 2:30 am.
+
+Finish time: 2:50 am.
+
+Actual time needed to complete: 20 minutes.
+
+---
+
 [BOOK APP ON HEROKU](https://book-app-esraa.herokuapp.com/)

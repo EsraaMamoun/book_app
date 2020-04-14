@@ -8,6 +8,12 @@
     h2 p{
         color: white;
     }
+    .theAdd{
+        width: 59%;
+		padding: 10px;
+		border-radius: 5px;
+		margin: 20px;
+    }
 }
 
 @media(min-width: 769px){
@@ -20,5 +26,11 @@
     h2 p{
         color: white;
         font-size: 25px;
+    }
+    .theAdd{
+        width: 61%;
+		padding: 10px;
+		border-radius: 5px;
+		margin: 20px;
     }
 }
