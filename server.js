@@ -24,6 +24,8 @@ app.get('/', databaseResults);
 app.get('/books/:book_id', getOneBook);
 app.get('/add', getForm);
 app.post('/add', addBook);
+app.put('/update/:book_id', updateBook);
+app.delete('/delete/:book_id', deleteBook);
 app.use('/public', express.static('public'));
 app.get('/hello', (req, res) => {
     res.render('pages/index');
@@ -53,7 +55,7 @@ function getOneBook(req, res) {
         res.render('pages/books/details', { book: result.rows[0] });
     }).catch((err) => {
         errorHandler(err, req, res);
-      });
+    });
 }
 
 function getForm(req, res) {
@@ -61,9 +63,9 @@ function getForm(req, res) {
 }
 
 function addBook(req, res) {
-    const { author,title,isbn,image_url,description,bookshelf } = req.body;
+    const { author, title, isbn, image_url, description, bookshelf } = req.body;
     const SQL = 'INSERT INTO books (author,title,isbn,image_url,description,bookshelf) VALUES ($1,$2,$3,$4,$5,$6);';
-    const value = [author,title,isbn,image_url,description,bookshelf];
+    const value = [author, title, isbn, image_url, description, bookshelf];
     client.query(SQL, value).then((results) => {
         res.redirect('/');
     }).catch((err) => errorHandler(err, req, res));
@@ -75,6 +77,27 @@ function databaseResults(req, res) {
         res.render('pages/index', { books: results.rows });
     }).catch((err) => errorHandler(err, req, res));
 }
+
+function updateBook(req, res) {
+    // const { author, title, isbn, image_url, description, bookshelf } = req.body;
+    const SQL =
+        'UPDATE books SET author=$1,title=$2,isbn=$3,image_url=$4,description=$5,bookshelf=$6 WHERE id=$7';
+    const values = [req.body.author, req.body.title, req.body.isbn, req.body.image_url, req.body.description, req.body.bookshelf];
+    client
+        .query(SQL, values)
+        .then((results) => res.redirect(`/books/${req.params.book_id}`))
+        .catch((err) => errorHandler(err, req, res));
+}
+
+function deleteBook(req, res) {
+    const SQL = 'DELETE FROM books WHERE id=$1';
+    const values = [req.params.book_id];
+    client
+      .query(SQL, values)
+      .then((results) => res.redirect('/'))
+      .catch((err) => errorHandler(err, req, res));
+}
+
 
 function Book(theBook) {
     this.imageLinks = theBook.volumeInfo.imageLinks.thumbnail;
