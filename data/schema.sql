@@ -4,7 +4,7 @@ CREATE TABLE books (
     author VARCHAR(255),
     title VARCHAR(255),
     isbn VARCHAR(255),
-    image_url VARCHAR(5000),
+    image_url VARCHAR(50000),
     description TEXT,
     bookshelf VARCHAR(255)
 )

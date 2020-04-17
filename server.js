@@ -101,7 +101,7 @@ function deleteBook(req, res) {
 
 
 function Book(theBook) {
-    this.imageLinks = theBook.volumeInfo.imageLinks.thumbnail;
+    this.imageLinks = (theBook.volumeInfo.imageLinks.thumbnail) ? theBook.volumeInfo.imageLinks.thumbnail : 'https://i7.uihere.com/icons/829/139/596/thumbnail-caefd2ba7467a68807121ca84628f1eb.png';
     this.title = theBook.volumeInfo.title;
     this.authors = theBook.volumeInfo.authors;
     this.description = theBook.volumeInfo.description;

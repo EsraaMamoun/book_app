@@ -6,10 +6,16 @@
     <link href="./public/styles/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <%- include('../layout/header')%>
+    <header>
+        <%- include('../layout/header')%>
+    </header>
+    
     <main>
-       <p><%= error%></p> 
+      <center><p style="padding: 20% 0px 20% 0px;"><%= error%></p> </center> 
     </main>
-    <%- include('../layout/footer')%>
+    <footer>
+        <%- include('../layout/footer')%>
+    </footer>
+    
 </body>
 </html>
