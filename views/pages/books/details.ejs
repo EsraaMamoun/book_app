@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <%- include('../../layout/head')%>
     <title>Book App - Details</title>
-    <link href="../public/styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="../public/styles/style.css" rel="stylesheet" type="text/css"/>
 </head>
-
 <body>
     <header>
         <%- include('../../layout/header')%>
     </header>
     <main>
         <article>
-            <section id="section">
-
+           <section id="section">
+                 
                 <img src=<%=book.image_url%>>
                 <p id="title"><%= book.title %></p>
                 <p id="authors"><%= book.author%></p>
                 <p id="description"><%= book.description %></p>
                 <p class="isbn">ISBN: <%= book.isbn%></p>
                 <p class="isbn">Bookshelf: <%= book.bookshelf%></p>
-
+            
             </section>
         </article>
+        <%- include('../../layout/form',{formAction:"UPDATE",book:book})%>
+        <form action="/delete/<%=book.id%>?_method=DELETE" method="post">
+        <button>DELETE THIS BOOK</button>
+    </form>
     </main>
     <footer>
         <%- include('../../layout/footer')%>
     </footer>
 </body>
-
 </html>

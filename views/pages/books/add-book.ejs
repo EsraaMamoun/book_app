@@ -15,16 +15,7 @@
         <h2 id="legend">
             <p>Add a new book</p>
         </h2>
-        <form action="/add" method="POST">
-
-            <input class="theAdd" type="text" name="title" placeholder="Book Title" />
-            <input class="theAdd" type="text" name="author" placeholder="Author" />
-            <textarea class="theAdd" name="image_url" placeholder="Image_URL of the Book Poster"></textarea>
-            <textarea class="theAdd" name="description" placeholder="Description of the Book"></textarea>
-            <input class="theAdd" type="text" name="bookshelf" placeholder="Bookshelf 'Like: Fantasy/ Science/ Drama etc...'" />
-            <input class="theAdd" type="text" name="isbn" placeholder="ISBN" />
-            <br>
-            <button>Add this Book</button>
+        <%- include('../../layout/form',{formAction:"POST",book:{}})%>
         </form>
     </main>
     <footer>
