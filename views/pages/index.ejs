@@ -10,12 +10,11 @@
         <%- include('../layout/header')%>
     </header>
     <main>
-        <h2 id="legend" style="background-color: rgb(56, 25, 85);"><p>Save Books <%= books.length;%></p></h2>
+        <h2 id="legend" class="color"><p>Save Books <%= books.length;%></p></h2>
         <h2 id="legend">
             <p>Search the Google Books API</p>
         </h2>
         <article>
-            <!-- <%var num = 0;%> -->
             <%books.forEach(book => {%>
             <section id="section">
                 <img src=<%=book.image_url%>>
@@ -23,7 +22,6 @@
                 <p id="authors"><%= book.author%></p>
                 <button><a href="/books/<%=book.id%>">View Details</a></button>
             </section>
-            <!-- <%num++;%> -->
             <% }) %>
         </article>
         

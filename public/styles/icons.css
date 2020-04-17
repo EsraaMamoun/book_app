@@ -35,6 +35,12 @@
         padding: 2% 0px 2% 0px;
         font-family: 'Amiri', serif;
     }
+    #legend{
+        font-size: 25px;
+    }
+    .color{
+        background-color: rgb(71, 73, 77);
+    }
 }
 
 @media(min-width: 769px){
@@ -73,5 +79,8 @@
     .isbn{
         padding: 2% 0px 2% 0px;
         font-family: 'Amiri', serif;
+    }
+    .color{
+        background-color: rgb(56, 25, 85);
     }
 }
