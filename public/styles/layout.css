@@ -14,6 +14,34 @@
 		border-radius: 5px;
 		margin: 20px;
     }
+    ul li{
+        float: right;
+    }
+    li{
+        padding: 0px 1% 0px 1%;
+        margin: 0px 4% 0px 4%;
+        background-color: rgba(100, 66, 167, 0.247);
+        border-radius: 50%;
+        font-size: 150%;
+    }
+    li a{
+        text-decoration: none;
+        color: whitesmoke;
+    }
+    ul li{
+        float: right;
+    }
+    li{
+        padding: 0px 1% 0px 1%;
+        margin: 0px 4% 0px 4%;
+        background-color: rgba(41, 30, 63, 0.247);
+        border-radius: 50%;
+        /* font-size: 150%; */
+    }
+    li a{
+        text-decoration: none;
+        color: whitesmoke;
+    }
 }
 
 @media(min-width: 769px){
@@ -32,5 +60,19 @@
 		padding: 10px;
 		border-radius: 5px;
 		margin: 20px;
+    }
+    ul li{
+        float: right;
+    }
+    li{
+        padding: 0px 1% 0px 1%;
+        margin: 0px 4% 0px 4%;
+        background-color: rgba(100, 66, 167, 0.247);
+        border-radius: 50%;
+        font-size: 150%;
+    }
+    li a{
+        text-decoration: none;
+        color: whitesmoke;
     }
 }

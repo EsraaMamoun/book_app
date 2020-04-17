@@ -58,6 +58,8 @@ table {
 	header p{
 		color: white;
 		margin-left: 3%;
+		float: left;
+		font-size: 40px;
 	}
 	header p a{
 		text-decoration: none;
@@ -97,6 +99,7 @@ table {
 		color: ivory;
 		margin-left: 3%;
 		font-size: 40px;
+		float: left;
 	}
 	header p a{
 		text-decoration: none;
